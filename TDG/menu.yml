@@ -1,0 +1,257 @@
+example:
+  ## Command to open the menu - OPTIONAL
+  command: 'tdgexample'
+  ## Run an action when a player open the menu, you can set this to "message: your message here"
+  open-action: 'sound: ENDERMAN_TELEPORT'
+  ## The distance away of the icons from the middle icon (3rd slot)
+  distances:
+    x1: 4
+    x2: 2
+    x4: 2
+    x5: 4
+  ## Menu icons
+  icons:
+    message-test:
+      ## Name that will be displayed above the icon
+      name: '&6Test message'
+      ## Icon type, you can set this to HEAD, BLOCK, ITEM, TOOL
+      icon-type: ITEM
+      ## Icon material
+      material: SIGN
+      ## Icon material data
+      material-data: 0
+      ## Icon positions
+      ## X max: 5
+      ## Y max: 2
+      ## You can check the spigot page to see the positions
+      positionX: 1
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      ## Add an action when the player click the icon
+      click-action:
+        ## You can set this to NONE, CLOSE, OPEN_MENU, MESSAGE, COMMAND, JSON_MESSAGE
+        action: MESSAGE
+        ## Action value
+        value: '&eHey, &a%player%&e, this is a test message!'
+    free-diamonds:
+      name: '&bFree diamonds!'
+      icon-type: ITEM
+      material: DIAMOND
+      material-data: 0
+      positionX: 2
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        action: COMMAND
+        value: 'give %player% diamond 1'
+        ## Execute command from player
+        ## If is "player" the command will be executed from player
+        ## If is "console" the command will be executed from console
+        executefrom: console
+    run-command-as-op:
+      name: '&9Command as op'
+      icon-type: TOOL
+      material: IRON_AXE
+      material-data: 0
+      positionX: 3
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        action: COMMAND
+        value: 'op: say Hello World!'
+        executefrom: player
+    command-test:
+      name: '&fCommand test'
+      icon-type: BLOCK
+      material: BOOKSHELF
+      material-data: 0
+      positionX: 4
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        action: COMMAND
+        value: 'commandtoexecutehere'
+        ## Execute command from player
+        ## If is "player" the command will be executed from player
+        ## If is "console" the command will be executed from console
+        executefrom: player
+    open-menu-test:
+      name: '&aSocials'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      ## Value is only applicable if the icon-type is HEAD
+      ## this is to set the head texture/owner
+      ## you can set here the url, a player name, or "%player%"
+      value: 'http://textures.minecraft.net/texture/b1dd4fe4a429abd665dfdb3e21321d6efa6a6b5e7b956db9c5d59c9efab25'
+      positionX: 5
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        ## Open another menu
+        action: OPEN_MENU
+        value: 'socials'
+    cooldown-test:
+      name: '&5Cooldown test'
+      icon-type: TOOL
+      material: BLAZE_ROD
+      material-data: 0
+      positionX: 1
+      positionY: 2
+      ## Add a cooldown when a player click this icon
+      click-cooldown:
+        enabled: true
+        ## Cooldown time in seconds
+        time: 3
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        action: MESSAGE
+        value: '&aClick this icon fast and you will see a cooldown! :)'
+    player-head:
+      name: '&e%player%'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: '%player%'
+      positionX: 3
+      positionY: 2
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        action: MESSAGE
+        value: '&aYou just clicked your head!'
+    close-test:
+      name: '&cClose menu'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/5a6787ba32564e7c2f3a0ce64498ecbb23b89845e5a66b5cec7736f729ed37'
+      positionX: 5
+      positionY: 2
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-action:
+        ## Close the current menu
+        action: CLOSE
+        value: ''
+socials:
+  command: 'socials'
+  open-action: 'sound: ENDERMAN_TELEPORT'
+  distances:
+    x1: 4
+    x2: 2
+    x4: 2
+    x5: 4
+  icons:
+    facebook:
+      name: '&9&lFacebook'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/deb46126904463f07ecfc972aaa37373a22359b5ba271821b689cd5367f75762'
+      positionX: 1
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-cooldown:
+        enabled: true
+        time: 2
+      click-action:
+        action: MESSAGE
+        value: '&b&lhttps://www.facebook.com/'
+    youtube:
+      name: '&c&lYoutube'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/3042c7bc2db85347e6a36928e9a146b4fc3e1def4febf279391be15de7f46e'
+      positionX: 2
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-cooldown:
+        enabled: true
+        time: 2
+      click-action:
+        action: MESSAGE
+        value: '&b&lhttps://www.youtube.com/'
+    website:
+      name: '&a&lWebsite'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/b1dd4fe4a429abd665dfdb3e21321d6efa6a6b5e7b956db9c5d59c9efab25'
+      positionX: 3
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-cooldown:
+        enabled: true
+        time: 2
+      click-action:
+        action: MESSAGE
+        value: '&b&lwww.yourwebsite.com'
+    discord:
+      name: '&3&lDiscord'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/7873c12bffb5251a0b88d5ae75c7247cb39a75ff1a81cbe4c8a39b311ddeda'
+      positionX: 4
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-cooldown:
+        enabled: true
+        time: 2
+      click-action:
+        action: MESSAGE
+        value: '&b&lhttps://discord.gg/'
+    twitter:
+      name: '&b&lTwitter'
+      icon-type: HEAD
+      material: none
+      material-data: 0
+      value: 'http://textures.minecraft.net/texture/3685a0be743e9067de95cd8c6d1ba21ab21d37371b3d597211bb75e43279'
+      positionX: 5
+      positionY: 1
+      click-sound:
+        enabled: true
+        sound: 'CHICKEN_EGG_POP'
+        pitch: 0
+      click-cooldown:
+        enabled: true
+        time: 2
+      click-action:
+        action: MESSAGE
+        value: '&b&lhttps://twitter.com/'

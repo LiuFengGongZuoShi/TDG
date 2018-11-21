@@ -1,0 +1,9 @@
+name: TDG
+version: 1.0.1
+author: ElDub
+main: ml.eldub.tdg.Main
+depend: [ProtocolLib]
+softdepend: [PlaceholderAPI]
+commands:
+   tdg:
+      description: TDG main command

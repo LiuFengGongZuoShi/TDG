@@ -1,0 +1,9 @@
+options:
+  update-checker: true
+messages:
+  prefix: '&8[&cTDG&8]'
+  cooldown: '%prefix% &cYou must wait %time% seconds to do this again.'
+  alreadyOpen: '%prefix% &cYou already have this menu open.'
+  noPermission: '&cYou don''t have permission to do this.'
+  invalidMenu: '%prefix% &cCouldn''t find the menu %menu%'
+  invalidArgument: '%prefix% &cInvalid argument.'
